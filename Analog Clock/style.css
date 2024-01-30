@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  position: relative;
+}
+body{
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.clock{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #3a4452;
+  border: 1px solid #29d4eb55;
+  box-shadow:-8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+.clock span{
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  inset: 12px;
+}
+.clock span b{
+  position: absolute;
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+  font-size: 25px;
+}
+.clock::before{
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+
+}
+.hr-hand i{
+  position: absolute;
+  height: 60px;
+  width: 6px;
+  border-radius: 30%;
+  background-color:red;
+}
+.min-hand i{
+  position: absolute;
+  height: 75px;
+  width: 4px;
+  border-radius: 30%;
+  background-color: green;
+ 
+}.sec-hand i{
+  position: absolute;
+  height: 85px;
+  width: 3px;
+  border-radius: 40%;
+  background-color: #fff;
+ 
+}
+.hr-hand,.min-hand,.sec-hand{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+button{
+  margin-top: 80px;
+  margin-left: 100px;
+  color: black;
+  background-color:white;
+  padding: 6px;
+  border-radius: 10px;
+}
